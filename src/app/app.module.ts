@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TaskDetailsComponent } from './components/task-details/task-details.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskDetailsComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule
