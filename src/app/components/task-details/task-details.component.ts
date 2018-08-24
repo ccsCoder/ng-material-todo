@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Task } from '../../models/Task';
 
 @Component({
@@ -8,12 +8,14 @@ import { Task } from '../../models/Task';
 })
 export class TaskDetailsComponent implements OnInit {
 
-  task:Task = new Task('Remember this', 'Remember Remember the fifth of November', null, false, false);
+    @Input() imageCount:number;  
 
+    task:Task = new Task('Remember this', 'Remember Remember the fifth of November', null, false, false);
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        
+    }
 
 }

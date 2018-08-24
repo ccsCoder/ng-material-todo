@@ -1,6 +1,15 @@
-<div class="task-details" style='background: "{{task.color}}";opacity:"0.6";'>
-  <h4>Title: {{task.title}}</h4>
-  <div>Description: {{task.description}}</div>
-  <div>Completed : {{task.complete}}</div>
-  <div></div>
+<!-- <div class="col s3 m4"> -->
+<div class="card">
+  <div class="card-image">
+    <img src="assets/images/back-{{(imageCount % 3)+1}}.jpg">
+    <span class="card-title">{{task.title}}</span>
+  </div>
+  <div class="card-content">
+    <p>{{task.description}}</p>
+  </div>
+  <div class="card-action">
+        <a class="waves-effect waves-teal btn-flat"> DELETE
+          <i class="material-icons right">delete</i>
+        </a>
+  </div>
 </div>
