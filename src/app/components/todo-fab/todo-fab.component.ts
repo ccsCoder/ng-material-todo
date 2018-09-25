@@ -14,9 +14,9 @@ export class TodoFabComponent implements OnInit {
       hoverEnabled: false
     }
 
-    M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), options);
+    window['M'].FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), options);
     
-    M.Tooltip.init(document.querySelectorAll(".tooltipped"), options);
+    window['M'].Tooltip.init(document.querySelectorAll(".tooltipped"), options);
   }
 
 }

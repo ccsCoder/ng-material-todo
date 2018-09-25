@@ -12,16 +12,17 @@ export class TodoListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    for (let i = 0; i < 10; i++) {
-      this.tasks.push(
-        new Task(
-          "Remember this",
-          "Remember Remember the fifth of November",
-          null,
-          false,
-          false
-        )
-      );
-    }
+    
+    // for (let i = 0; i < 10; i++) {
+    //   this.tasks.push(
+    //     new Task(
+    //       "Remember this",
+    //       "Remember Remember the fifth of November",
+    //       null,
+    //       false,
+    //       false
+    //     )
+    //   );
+    // }
   }
 }
