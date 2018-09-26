@@ -9,7 +9,9 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoSearchComponent } from './components/todo-search/todo-search.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TodoFabComponent } from './components/todo-fab/todo-fab.component';
-import { HttpClientModule } from "@angular/common/http/";
+import { HttpModule } from "@angular/http/";
+
+import { TodoDataServiceService } from "./services/todo-data-service.service";
 
 
 
@@ -26,9 +28,11 @@ import { HttpClientModule } from "@angular/common/http/";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    TodoDataServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

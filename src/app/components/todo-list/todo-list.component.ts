@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Task } from "../../models/Task";
+import { TodoDataServiceService } from "../../services/todo-data-service.service";
 
 @Component({
   selector: "app-todo-list",
@@ -9,10 +10,16 @@ import { Task } from "../../models/Task";
 export class TodoListComponent implements OnInit {
   tasks: Task[] = [];
 
-  constructor() {}
+  constructor(private todoService: TodoDataServiceService) {}
 
   ngOnInit() {
+    this.todoService.getAllTasks().subscribe( data => {
+      this.tasks = data; 
+    });
     
+
+
+
     // for (let i = 0; i < 10; i++) {
     //   this.tasks.push(
     //     new Task(
