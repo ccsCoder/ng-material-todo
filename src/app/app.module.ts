@@ -12,6 +12,7 @@ import { TodoFabComponent } from './components/todo-fab/todo-fab.component';
 import { HttpModule } from "@angular/http/";
 
 import { TodoDataServiceService } from "./services/todo-data-service.service";
+import { TodoHeaderComponent } from './components/todo-header/todo-header.component';
 
 
 
@@ -22,7 +23,8 @@ import { TodoDataServiceService } from "./services/todo-data-service.service";
     NewTaskComponent,
     TodoListComponent,
     TodoSearchComponent,
-    TodoFabComponent
+    TodoFabComponent,
+    TodoHeaderComponent
 
   ],
   imports: [

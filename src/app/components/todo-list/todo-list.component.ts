@@ -8,28 +8,22 @@ import { TodoDataServiceService } from "../../services/todo-data-service.service
   styleUrls: ["./todo-list.component.css"]
 })
 export class TodoListComponent implements OnInit {
-  tasks: Task[] = [];
+  private _tasks: Task[];
 
   constructor(private todoService: TodoDataServiceService) {}
 
   ngOnInit() {
-    this.todoService.getAllTasks().subscribe( data => {
-      this.tasks = data; 
-    });
+    console.log('inside ngOnInit()');
     
+    this.todoService.getAllTasks().subscribe( data => {
+      this._tasks = data;
+    });
 
-
-
-    // for (let i = 0; i < 10; i++) {
-    //   this.tasks.push(
-    //     new Task(
-    //       "Remember this",
-    //       "Remember Remember the fifth of November",
-    //       null,
-    //       false,
-    //       false
-    //     )
-    //   );
-    // }
   }
+
+  
+  public get tasks() : Task[] {
+    return this._tasks
+  }
+  
 }

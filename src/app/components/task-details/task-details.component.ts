@@ -9,8 +9,7 @@ import { Task } from '../../models/Task';
 export class TaskDetailsComponent implements OnInit {
 
     @Input() imageCount:number;  
-
-    task:Task = new Task('Remember this', 'Remember Remember the fifth of November', null, false, false);
+    @Input() task:Task;
 
     constructor() { }
 

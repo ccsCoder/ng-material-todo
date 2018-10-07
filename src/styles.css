@@ -1,5 +1,12 @@
+html {
+  font-family: 'IM Fell DW Pica', serif;;
+  font-size: 18px;
+
+}
+
 body {
     
-    background: gainsboro;
-    background-size: cover;
+    /* background: url(assets/images/material-back.jpg); */
+    /* background-size: cover; */
+    background-color: #e8e8e8;
 }
